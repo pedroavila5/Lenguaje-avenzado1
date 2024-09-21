@@ -36,7 +36,11 @@ else
   end
 end
 
-precio_total = precio_unitario * cantidad * (1 - descuento)
-puts "Calcular precio total: #{precio_total}"
+precio_total_sin_descuento = precio_unitario * cantidad
+precio_total_con_descuento = precio_total_sin_descuento * (1 - descuento)
+
+puts "Precio: #{precio_total_sin_descuento}"
 puts "Aplicar descuento: #{(descuento * 100).to_i}%"
+puts "Precio total: #{precio_total_con_descuento}"
 puts "Generar factura"
+
